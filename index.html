@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!--Logo aba ==> link para exibição do logo reduzido na aba da guia-->
+        <link rel="icon" type="image/png" sizes="192x192" href="http://mondrian.claro.com.br/brands/nosvg/android-icon-192x192.png">
+        
+        <!--Acesso ao estilo das paginas-->
+        <link rel="stylesheet" href="assets/style.css">
+
+
+        <!--Biblioteca D3 ==> responsavel pelo filtro dos dados contidos na DOM-->
+        <script src="https://d3js.org/d3.v5.js"></script> 
+
+        <!--Biblioteca Papa Parse ==> responsavel pela leitura dinamica dos arquivos csv e texto-->
+        <script src="https://cdn.jsdelivr.net/npm/papaparse@5.2.0/papaparse.min.js"></script> 
+
+        <!--Main ==> Classe do projeto responsavel por conter as ligações entre as classes de ação-->
+        <script src="./js/main.js" type="module"></script> 
+        <script src="./js/FilterCsv.js" type="module"></script> 
+        
+        
+        <!--Titulo da página (é exibido na Guia)-->
+        <title>COP Cotas</title>
+    </head>
+    
+    <!--INICIO HEADER-->
+    <header>
+        <div class="content">
+            <div class="menu">
+                <div class="logo">
+                    <a href="#">
+                        <img src="assets/icons/logoClaro.webp" alt="logo da empresa claro brasil">
+                    </a>
+                </div>
+                <nav>
+                    <a href="home.html">Inicio</a>
+                    <a href="index.html">Painel</a>
+                    <a href="#">Cop Info</a>
+                    <a href="suporte.html">Suporte</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--FIM HEADER-->
+    
+    <!--INICIO BODY-->
+    <body>
+        <!--FilterCsv ==> Classe do projeto responsavel por conter metodos e funções para realizar os filtros necessários-->
+        <script src="./js/FilterCsv.js" type="module"></script> 
+        <div class="content">
+            <section class="selecao">
+                <div class="content">
+                    <div class="selecaoInput">
+                        <input type="file" id="csvFileInput">
+                        <input type="text" id="inputBusca">                
+                    </div>
+                </div>
+
+                <!--Tabele que recebe os dados contidos no arquivo importado-->
+                <table id="csvRoot">
+                    
+                </table>
+            </section>
+        </div>
+    </body>
+    <!--FIM BODY-->
+
+    <!--INICIO RODAPE-->
+    <footer>
+        <div class="content">
+            <p>© 2022 Claro. Todos os direitos reservados. CNPJ: 40.432.544/0001-47 - Rua Henri Dunant, 780 - São Paulo - SP</p>
+        </div>
+    </footer>
+    <!--FIM RODAPE-->   
+</html> 
